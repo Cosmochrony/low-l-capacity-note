@@ -44,7 +44,8 @@ A $2\times2$ grid of parameter-free envelopes and angular dictionaries, anchored
 $n=1\leftrightarrow\ell=2$, is confronted with the Planck 2018 spectra without any fitting:
 on TT ($2\le\ell\le30$) every cell improves on $\lcdm$, with diagnostic $\chi^2$ dropping from
 $27.4$ to $17.3$ for the theoretically preferred cell (Bessel envelope with the H-dictionary);
-TE is neutral and EE mildly disfavoured, as expected from the missing transfer treatment.
+TE is neutral and EE mildly disfavoured, consistently with the fact that no dedicated low-$\ell$
+polarization transfer treatment is included at this stage.
 The envelope is a staircase in $\ell$ (integer admissibility ranks), a distinctive discrete
 signature.
 The independent $8/3$ geometric witness is re-audited and predicts the separate modulation-scale
@@ -152,8 +153,9 @@ witness.
 
 \paragraph{Audit outcome.}
 The deterministic Monte-Carlo witness (seed $0$, $30$ repeats per resolution) was rerun and gives
-$R=2.666993\pm0.001188$ ($95\%$ CI) at $N=10^6$ samples, consistent with $8/3=2.666\overline{6}$;
-convergence is monotone from $N=10^4$ onward (Figure~\ref{fig:witness}).
+$R=2.666993\pm0.001188$ ($95\%$ CI) at $N=10^6$ samples, consistent with $8/3=2.666\overline{6}$.
+From $N=10^4$ onward the estimate remains statistically stable around the target within the quoted
+confidence bands (Figure~\ref{fig:witness}).
 Statements (i)--(iii) hold within the quoted confidence intervals; statement (iv) holds because the
 derivation uses only the uniform $S^3$ measure and the Born--Infeld stiffness factor, with no input
 from LPS or Heisenberg counting.
@@ -319,12 +321,13 @@ Three observations.
 First, on TT every parameter-free cell improves on $\lcdm$, and the largest improvement
 ($\Delta\chi^2\simeq-10$ with zero parameters) is obtained by the theoretically preferred cell:
 the derived Bessel envelope with the H-dictionary.
-Second, TE is neutral to mildly favourable and EE mildly disfavoured
-($\Delta\chi^2\simeq+1$); this is consistent with the minimal propagation ignoring the
-reionisation-dominated low-$\ell$ EE transfer, and is reported as an open tension of the minimal
-version, not hidden.
+Second, TE is neutral to mildly favourable and EE mildly disfavoured ($\Delta\chi^2\simeq+1$).
+This is reported as an open tension of the minimal propagation, plausibly tied to the absence of a
+dedicated reionisation-dominated low-$\ell$ EE transfer treatment, not as a resolved prediction.
 Third, the envelope is a staircase in $\ell$ (integer admissibility ranks,
 Figure~\ref{fig:grid}), a distinctive discrete signature that no smooth damping law reproduces.
+The four-cell grid should be read as a small set of pre-declared structural alternatives, not as a
+continuous parameter search; no cell is renormalised or retuned after comparison with the data.
 
 \begin{figure}[t]
 \centering
@@ -339,7 +342,10 @@ ranks.}
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{lowl_capacity_grid_pol.pdf}
-\caption{The same no-fit envelopes propagated minimally to TE and EE.}
+\caption{The same no-fit envelopes propagated minimally to TE and EE.
+Because the four no-fit envelopes are close to unity over most of the displayed range, their TE/EE
+curves are visually nearly degenerate with the $\lcdm$ baseline; the quantitative comparison is
+carried by Table~\ref{tab:grid} rather than by visual separation in this figure.}
 \label{fig:pol}
 \end{figure}
 
@@ -402,6 +408,6 @@ The theoretical results and their interpretation remain the author's responsibil
 
 \clearpage
 \bibliographystyle{plain}
-\bibliography{cosmochrony-bibliography,external-refs}
+\bibliography{cosmochrony-refs,external-refs}
 
 \end{document}
