@@ -1,0 +1,407 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{doi}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\newcommand{\Nhist}{N_{\mathrm{hist}}}
+\newcommand{\Shist}{S_{\mathrm{hist}}}
+\newcommand{\lcdm}{\Lambda\mathrm{CDM}}
+
+\title{Low-Multipole Suppression from Distinguishable-History Capacity}
+\author{J\'er\^ome Beau}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We isolate a parameter-free route to large-angle CMB suppression within the Cosmochrony framework.
+The previous phenomenological low-$\ell$ envelope of the white paper is replaced by a
+distinguishable-history mechanism.
+The central geometric input is the $S^3$ fibre decomposition, whose uniform moment split gives a
+fibre-to-base spectral stiffness ratio $8/3$ once the Born--Infeld saturation factor is included.
+The central low-$\ell$ input is not a vanishing early growth rate, but the small absolute number of
+distinguishable projective histories at the first admissibility ranks.
+For the canonical Pell counting channel of the trajectory-branching note,
+\[
+\Nhist(n)=\frac{(1+\sqrt{2})^{n+1}+(1-\sqrt{2})^{n+1}}{2},
+\]
+so $\Nhist(1)=3$, $\Nhist(2)=7$, and $\Nhist(3)=17$: large angular modes probe a regime with very
+few distinguishable histories, a bounded-history effect on the admissible large-angle power rather
+than an adjustable damping law.
+A $2\times2$ grid of parameter-free envelopes and angular dictionaries, anchored only by
+$n=1\leftrightarrow\ell=2$, is confronted with the Planck 2018 spectra without any fitting:
+on TT ($2\le\ell\le30$) every cell improves on $\lcdm$, with diagnostic $\chi^2$ dropping from
+$27.4$ to $17.3$ for the theoretically preferred cell (Bessel envelope with the H-dictionary);
+TE is neutral and EE mildly disfavoured, as expected from the missing transfer treatment.
+The envelope is a staircase in $\ell$ (integer admissibility ranks), a distinctive discrete
+signature.
+The independent $8/3$ geometric witness is re-audited and predicts the separate modulation-scale
+ratio $\sqrt{8/3}\simeq1.633$.
+\end{abstract}
+
+\medskip
+\noindent\textbf{Keywords:} cosmic microwave background; low-multipole anomaly; non-injective
+projection; distinguishable histories; Pell numbers; $S^3$ Hopf fibration; cosmic variance.
+
+\newpage
+\tableofcontents
+
+\newpage
+\section{Purpose and status}
+\label{sec:purpose}
+
+The purpose of this note is to separate three logically distinct statements.
+
+First, the ratio $8/3$ is a geometric statement about the admissible $S^3$ projection
+fibre~\cite{Cosmochrony}.
+It is not fitted to CMB data.
+It should therefore be presented as a structural witness, not as a low-$\ell$ envelope.
+
+Second, the observed low-$\ell$ TT suppression is not explained by multiplying the Planck
+low-$\ell$ data by an additional attenuation factor.
+That operation would dress the observation with itself and would not define a prediction.
+The admissible comparison is instead
+\[
+C_\ell^{\mathrm{pred}}=C_\ell^{\lcdm}\,\Shist(\ell),
+\]
+where $\Shist(\ell)$ is computed from the distinguishable-history count.
+
+Third, the envelope used in the white-paper appendix,
+$S_{\alpha,\ell_c}(\ell)=1-\alpha\exp(-\ell/\ell_c)$, has only phenomenological status: two free
+parameters and an illustrative comparison~\cite{Cosmochrony}.
+It can remain useful as a descriptive diagnostic, but not as the core claim.
+This note replaces it by a count-derived envelope.
+
+\begin{remark}[Terminology]
+The word ``capacity'' is used in several parts of the Cosmochrony corpus.
+Here it refers to distinguishable-history capacity, namely the number of projectively
+distinguishable histories available to a large-angle mode at a given admissibility rank, as
+established in the trajectory-branching note~\cite{Beau2026tb}.
+This is not the same observable as the O-series projective-capacity exponent
+$\delta_{\mathrm{cap}}$, although both express finite projective distinguishability under
+admissibility constraints.
+\end{remark}
+
+\section{The $8/3$ geometric witness}
+\label{sec:witness}
+
+The projection fibre carries the Hopf geometry $S^1\hookrightarrow S^3\rightarrow S^2$.
+For a uniformly sampled point on $S^3\subset\mathbb{R}^4$, the one-dimensional Hopf phase direction
+carries one quadratic moment while the three transverse directions carry three, so the
+base-to-fibre moment split is
+\[
+\frac{\langle |x_{\mathrm{base}}|^2\rangle}{\langle |x_{\mathrm{fibre}}|^2\rangle}=3 .
+\]
+Born--Infeld saturation selects the saturated projective response of the fibre direction; in the
+normalisation used by the $S^3$ diagnostic it contributes the rigidity factor $8$ on the fibre-side
+stiffness~\cite{Cosmochrony}.
+The resulting stiffness ratio is
+\[
+\frac{\lambda_{\mathrm{fibre}}}{\lambda_{\mathrm{base}}}=\frac{8}{3}.
+\]
+
+\begin{proposition}[Central geometric invariant]
+\label{prop:invariant}
+The ratio $8/3$ is a structural invariant of the $S^3$ projection fibre with Born--Infeld
+saturation.
+It is independent of the low-$\ell$ temperature data and must not be inferred from the observed CMB
+spectrum.
+\end{proposition}
+
+This witness has its own observable signature.
+Since angular scale ratios inherit the square root of the stiffness ratio, the expected modulation
+ratio is
+\[
+\frac{\ell_2}{\ell_1}\simeq\sqrt{\frac{8}{3}}\simeq 1.633 .
+\]
+This is separate from the envelope $\Shist(\ell)$: the note carries two observables, the history
+envelope from $\Nhist(n)$ and the geometric modulation ratio $\sqrt{8/3}$.
+
+\section{The $S^3$ witness re-audit}
+\label{sec:reaudit}
+
+The correct re-audit target is the $S^3$ geometric witness, not an action of a group denoted $D_4$
+on $S^3$: in the corpus notation, D4 is the fourth distinguishability definition of the
+trajectory-branching note~\cite{Beau2026tb}, not a dihedral symmetry acting on the $S^3$
+diagnostic.
+The audit verifies four statements: (i) the sampled $S^3$ measure is unbiased with respect to the
+Hopf fibre/base split; (ii) the fibre/base quadratic moment split is unchanged by the chosen
+discretisation; (iii) the Laplacian estimator recovers the same stiffness ratio under seed changes;
+(iv) the ratio remains a geometric invariant and is not imported from an LPS or Heisenberg counting
+artefact.
+
+The expected audit statement is only
+\[
+S^3+\mathrm{BI\ saturation}\;\Longrightarrow\;\lambda_{\mathrm{fibre}}/\lambda_{\mathrm{base}}=8/3,
+\]
+narrow, checkable, and reusable.
+The D4 content of the low-$\ell$ note belongs to the distinguishability count, not to the $S^3$
+witness.
+
+\paragraph{Audit outcome.}
+The deterministic Monte-Carlo witness (seed $0$, $30$ repeats per resolution) was rerun and gives
+$R=2.666993\pm0.001188$ ($95\%$ CI) at $N=10^6$ samples, consistent with $8/3=2.666\overline{6}$;
+convergence is monotone from $N=10^4$ onward (Figure~\ref{fig:witness}).
+Statements (i)--(iii) hold within the quoted confidence intervals; statement (iv) holds because the
+derivation uses only the uniform $S^3$ measure and the Born--Infeld stiffness factor, with no input
+from LPS or Heisenberg counting.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.62\textwidth]{convergence_8_3_S3.pdf}
+\caption{Re-audited $S^3$ witness: Monte-Carlo convergence of the fibre-to-base stiffness ratio to
+$8/3$ (deterministic seed, $95\%$ confidence bands).}
+\label{fig:witness}
+\end{figure}
+
+\section{Correcting the low-rank mechanism}
+\label{sec:mechanism}
+
+The canonical distinguishability count of the trajectory-branching note~\cite{Beau2026tb} has the
+closed form
+\[
+\Nhist(n)=\frac{(1+\sqrt{2})^{n+1}+(1-\sqrt{2})^{n+1}}{2},
+\qquad
+\Nhist(0)=1,\;\Nhist(1)=3,\;\Nhist(2)=7,\;\Nhist(3)=17 .
+\]
+The second term $(1-\sqrt{2})^{n+1}$ is already small at low $n$.
+Consequently, the canonical channel does not support a claim that the early logarithmic growth rate
+is nearly zero.
+The honest statement is different: the first admissibility ranks contain only a very small absolute
+number of distinguishable projective histories.
+
+This small-$N$ regime affects the largest angular modes because they probe the earliest and most
+global projective ranks (under the rank--time dictionary of the cosmology
+paper~\cite{Beau2026d}, the smallest ranks correspond to the largest observable scales).
+A mode supported by only $N$ distinguishable histories cannot be assigned the same ensemble status
+as a high-$N$ mode.
+The open theoretical step is the following: why does a small distinguishable-history number
+suppress ensemble power, rather than only enlarge the cosmic variance~\cite{Knox1995}?
+The proposed answer is that history capacity bounds the entropy of the mode: a mode whose
+projective support contains only $N$ distinguishable histories cannot carry the same number of
+independent amplitude realisations as the high-rank effective ensemble, so the observed large-angle
+power is biased toward a bounded-capacity estimate rather than merely scattered around the
+unconstrained $\lcdm$ mean.
+This entropy-to-power step is the central theoretical point to sharpen; the numerical section below
+tests its two minimal statistical conversions without attempting to decide it.
+
+\section{Two parameter-free envelopes}
+\label{sec:envelopes}
+
+The statistical conversion from $\Nhist$ to a suppression factor should not introduce a fitted
+constant.
+Two no-fit candidates are retained.
+
+\subsection{Bessel envelope}
+
+If the suppression is interpreted as the expected loss in an unbiased finite-sample variance
+estimate, the Bessel correction gives
+\[
+S_{\mathrm{Bessel}}(N)=1-\frac{1}{N}=\frac{N-1}{N}.
+\]
+This form is derived from the finite number of distinguishable histories and introduces no
+additional convention.
+
+\subsection{Capacity-ratio envelope}
+
+A second conservative form is
+\[
+S_{\mathrm{cap}}(N)=\frac{N}{N+1},
+\]
+readable as a one-cell capacity completion: one unresolved complement cell remains outside the $N$
+realised histories.
+It is not as directly derived as the Bessel form, but it provides a useful no-fit companion.
+
+For the first ranks the two forms are close enough to be jointly reported:
+\[
+\begin{array}{c|c|c|c}
+n & \Nhist(n) & S_{\mathrm{Bessel}} & S_{\mathrm{cap}}\\
+\hline
+1 & 3 & 2/3 & 3/4\\
+2 & 7 & 6/7 & 7/8\\
+3 & 17 & 16/17 & 17/18
+\end{array}
+\]
+From $n=2$ onward the gap between the two envelopes is below $8\%$.
+Both are run below; neither is fitted.
+
+\section{Two no-fit angular dictionaries}
+\label{sec:dictionaries}
+
+Let $n(\ell)$ denote the admissibility rank sampled by the angular multipole $\ell$.
+The large-angle dictionary is order preserving after anchoring: larger $\ell$ probes later and more
+highly resolved admissibility ranks.
+Two no-fit dictionaries are tested.
+
+\subsection{Natural H-dictionary}
+
+The H-dictionary identifies admissibility rank with logarithmic scale, $n=\log a$
+(Hypothesis H-dict of the cosmology paper~\cite{Beau2026d}).
+Anchoring the first admissible rank to the quadrupole gives
+\[
+n_{\mathrm{H}}(\ell)=1+\ln\!\left(\frac{\ell}{2}\right),
+\]
+with integer rank obtained by nearest-integer projection, fixed before the run (floor is reported
+as a robustness check).
+Then $\Nhist(n_{\mathrm{H}}(\ell))\sim\ell^{\log(1+\sqrt2)}$ with $\log(1+\sqrt2)\simeq0.881$.
+
+\subsection{Pell-rate dictionary}
+
+The alternative dictionary couples the angular rank directly to the Pell growth rate:
+\[
+n_{\rho}(\ell)=1+\log_{\rho}\!\left(\frac{\ell}{2}\right),
+\qquad
+\rho=1+\sqrt{2},
+\]
+giving $\Nhist\sim\ell$.
+It is elegant, but it is a distinct dictionary choice, not forced by the H-dictionary.
+
+The comparison grid is therefore
+$\{S_{\mathrm{Bessel}},S_{\mathrm{cap}}\}\times\{n_{\mathrm{H}},n_{\rho}\}$, and every cell is
+parameter-free after the quadrupole anchoring $n=1\leftrightarrow\ell=2$.
+
+\section{Observable comparison}
+\label{sec:comparison}
+
+The admissible TT comparison is
+\[
+D_\ell^{TT,\mathrm{pred}}=D_\ell^{TT,\lcdm}\,\Shist(\ell),
+\qquad
+D_\ell=\frac{\ell(\ell+1)}{2\pi}C_\ell ,
+\]
+with the Planck low-$\ell$ data~\cite{Planck2018} used only as observations against which the
+prediction is tested; they are never multiplied by the suppression factor.
+The same envelope is propagated minimally to the polarization channels,
+$S^{TE}_{\mathrm{hist}}\simeq S^{EE}_{\mathrm{hist}}\simeq S^{TT}_{\mathrm{hist}}$, up to
+transfer-function effects; a mismatch between TT, TE, and EE would either falsify the minimal
+mechanism or force a more detailed transfer calculation.
+
+\subsection{Numerical outcome}
+\label{subsec:outcome}
+
+The grid was evaluated against the Planck 2018 (PR3) spectra, using the published best-fit $\lcdm$
+theory curve, no renormalisation, no fitted constant, symmetrised published errors, and the range
+$2\le\ell\le30$ ($29$ points per channel).
+The resulting diagnostic $\chi^2$ values are:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lccc}
+\toprule
+cell & TT & TE & EE \\
+\midrule
+$\lcdm$ ($S=1$)                        & $27.39$ & $27.02$ & $22.61$ \\
+$S_{\mathrm{Bessel}}$, $n_{\mathrm{H}}$    & $\mathbf{17.29}$ & $25.81$ & $23.82$ \\
+$S_{\mathrm{Bessel}}$, $n_{\rho}$          & $19.78$ & $26.16$ & $23.66$ \\
+$S_{\mathrm{cap}}$, $n_{\mathrm{H}}$       & $18.28$ & $26.02$ & $23.59$ \\
+$S_{\mathrm{cap}}$, $n_{\rho}$             & $20.58$ & $26.34$ & $23.44$ \\
+\bottomrule
+\end{tabular}
+\caption{Diagnostic $\chi^2$ over $2\le\ell\le30$ ($29$ points), no fitting, quadrupole-anchored.
+Nearest-integer ranks; the floor variant changes TT values by less than $2.5$ (e.g.\ $17.41$ for
+the leading cell).}
+\label{tab:grid}
+\end{table}
+
+Three observations.
+First, on TT every parameter-free cell improves on $\lcdm$, and the largest improvement
+($\Delta\chi^2\simeq-10$ with zero parameters) is obtained by the theoretically preferred cell:
+the derived Bessel envelope with the H-dictionary.
+Second, TE is neutral to mildly favourable and EE mildly disfavoured
+($\Delta\chi^2\simeq+1$); this is consistent with the minimal propagation ignoring the
+reionisation-dominated low-$\ell$ EE transfer, and is reported as an open tension of the minimal
+version, not hidden.
+Third, the envelope is a staircase in $\ell$ (integer admissibility ranks,
+Figure~\ref{fig:grid}), a distinctive discrete signature that no smooth damping law reproduces.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{lowl_capacity_grid.pdf}
+\caption{Top: Planck 2018 TT low-$\ell$ data against $\lcdm$ (grey) and the four parameter-free
+capacity-envelope predictions.
+Bottom: the four envelopes $\Shist(\ell)$; the staircase structure reflects integer admissibility
+ranks.}
+\label{fig:grid}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{lowl_capacity_grid_pol.pdf}
+\caption{The same no-fit envelopes propagated minimally to TE and EE.}
+\label{fig:pol}
+\end{figure}
+
+\begin{remark}[Statistical status]
+The $\chi^2$ values of Table~\ref{tab:grid} are diagnostics, not a likelihood analysis: the
+published errors are symmetrised, multipole correlations are neglected, and the $\lcdm$ baseline
+already has $\chi^2/N<1$ on this range.
+The claim is therefore not a detection; it is that a mechanism with zero adjustable parameters
+moves the low-$\ell$ prediction toward the data in TT while remaining falsifiable in TE/EE.
+\end{remark}
+
+\section{Falsifiability}
+\label{sec:falsifiability}
+
+The low-$\ell$ mechanism has four falsification channels: (1) the $S^3$ audit fails to recover
+$8/3$ under unbiased fibre/base sampling; (2) the modulation-scale ratio
+$\ell_2/\ell_1\simeq\sqrt{8/3}$ is absent from the relevant witness; (3) the count-derived no-fit
+envelopes suppress the wrong multipole range; (4) the TT suppression is not accompanied by the
+corresponding TE/EE large-angle signature once the transfer treatment is included.
+Channels (1) and (3) are already tested above and pass; channels (2) and (4) are open.
+These are acceptable risks: they turn the low-$\ell$ claim from an illustrative ansatz into a
+constrained prediction.
+
+\section{Suggested replacement for the corpus text}
+\label{sec:replacement}
+
+The following paragraph can replace the phenomenological low-$\ell$ claim of the white-paper
+appendix~\cite{Cosmochrony}, and sharpens the pre-branching wording of the cosmology
+paper~\cite{Beau2026d}.
+
+\begin{quote}
+At the largest angular scales, the relevant modes probe the first admissibility ranks of the
+projective description.
+The suppression mechanism is therefore not an adjustable dynamical damping term.
+It follows from the small absolute number of distinguishable projective histories available at
+those ranks.
+In the canonical counting channel this number is
+$\Nhist(n)=((1+\sqrt{2})^{n+1}+(1-\sqrt{2})^{n+1})/2$, so the first ranks contain only $3$, $7$,
+and $17$ distinguishable histories.
+The resulting large-angle deficit is a small-$N$ distinguishable-history effect.
+The comparison with CMB data must be made by applying the derived history envelope to the $\lcdm$
+spectrum, not by attenuating the observed Planck points.
+\end{quote}
+
+\section{Status and open problems}
+\label{sec:status}
+
+Proved elsewhere and imported: the canonical Pell count and its closed form~\cite{Beau2026tb}.
+Geometric, re-audited here: the $8/3$ fibre-to-base stiffness ratio and its Monte-Carlo witness.
+Numerical, no-fit: the $2\times2$ grid outcome of Table~\ref{tab:grid}.
+Open: the entropy-to-power step (why bounded history capacity biases ensemble power rather than
+only enlarging cosmic variance); the transfer treatment of TE/EE; the modulation-ratio search
+($\ell_2/\ell_1\simeq1.633$); the corpus text updates (white-paper appendix and cosmology
+pre-branching wording).
+
+\section*{Acknowledgements}
+Portions of the development of this note benefited from iterative interactions with large language
+models used as analytical assistants.
+The theoretical results and their interpretation remain the author's responsibility.
+
+\clearpage
+\bibliographystyle{plain}
+\bibliography{cosmochrony-bibliography,external-refs}
+
+\end{document}
