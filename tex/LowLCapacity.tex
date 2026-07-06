@@ -40,6 +40,9 @@ For the canonical Pell counting channel of the trajectory-branching note,
 so $\Nhist(1)=3$, $\Nhist(2)=7$, and $\Nhist(3)=17$: large angular modes probe a regime with very
 few distinguishable histories, a bounded-history effect on the admissible large-angle power rather
 than an adjustable damping law.
+The companion projection-kernel note derives the Bessel envelope used below as the exact
+information-theoretic capacity ceiling of a complex Gaussian mode supported on $N$ distinguishable
+histories, carrying the entropy-to-power step as a conditional theorem chain.
 A $2\times2$ grid of parameter-free envelopes and angular dictionaries, anchored only by
 $n=1\leftrightarrow\ell=2$, is confronted with the Planck 2018 spectra without any fitting:
 on TT ($2\le\ell\le30$) every cell improves on $\lcdm$, with diagnostic $\chi^2$ dropping from
@@ -189,15 +192,20 @@ global projective ranks (under the rank--time dictionary of the cosmology
 paper~\cite{Beau2026d}, the smallest ranks correspond to the largest observable scales).
 A mode supported by only $N$ distinguishable histories cannot be assigned the same ensemble status
 as a high-$N$ mode.
-The open theoretical step is the following: why does a small distinguishable-history number
-suppress ensemble power, rather than only enlarge the cosmic variance~\cite{Knox1995}?
-The proposed answer is that history capacity bounds the entropy of the mode: a mode whose
-projective support contains only $N$ distinguishable histories cannot carry the same number of
-independent amplitude realisations as the high-rank effective ensemble, so the observed large-angle
-power is biased toward a bounded-capacity estimate rather than merely scattered around the
-unconstrained $\lcdm$ mean.
-This entropy-to-power step is the central theoretical point to sharpen; the numerical section below
-tests its two minimal statistical conversions without attempting to decide it.
+The conversion of this bounded capacity into ensemble power is carried by the companion
+projection-kernel note~\cite{Beau2026pce}.
+Under graded hypotheses (fibre-invariance, fixity on resolved content, linearity,
+non-amplification), the amplitude-level action of the projection is the conditional expectation onto
+the sigma-algebra of the distinguishable-history record, so the projected ensemble power is the
+substrate power minus the erased intra-fibre variance (law of total variance): a strict suppression
+of the ensemble mean, not an enlargement of the cosmic variance~\cite{Knox1995}, with the usual
+cosmic variance operating around the suppressed mean.
+The bound is quantitative: for a complex Gaussian mode supported on $N$ distinguishable histories,
+the retained power fraction is at most $(N-1)/N$ (one-shot rate--distortion converse).
+The counts are per-mode capacities of each mode's own projective support; the per-mode support and
+cross-mode independence hypotheses, together with the rank--time dictionary, are stated
+in~\cite{Beau2026pce} and~\cite{Beau2026d}, and the numerical section below tests the two minimal
+statistical conversions of the pre-declared grid.
 
 \section{Two parameter-free envelopes}
 \label{sec:envelopes}
@@ -215,6 +223,13 @@ S_{\mathrm{Bessel}}(N)=1-\frac{1}{N}=\frac{N-1}{N}.
 \]
 This form is derived from the finite number of distinguishable histories and introduces no
 additional convention.
+The projection-kernel note~\cite{Beau2026pce} derives the same form independently of the estimator
+reading: $(N-1)/N$ is the exact maximal retained power fraction permitted by a capacity of $N$
+distinguishable histories for one complex Gaussian degree of freedom, so the Bessel envelope is the
+capacity ceiling --- proved given the kernel hypotheses --- rather than a statistical convention.
+For the real $m=0$ mode the per-mode ceiling weakens to $1-1/N^2$; the multiplet-averaged correction
+is $\ell$-dependent and is not applied in the grid below, which uses the complex-mode ceiling
+uniformly.
 
 \subsection{Capacity-ratio envelope}
 
@@ -400,8 +415,9 @@ the quadrupole, improve the Planck TT low-$\ell$ diagnostic $\chi^2$ from $27.4$
 theoretically preferred cell, with all four pre-declared cells improving, a staircase envelope as
 a discrete signature, TE neutral, and EE mildly disfavoured.
 \item The claim is bounded: the $\chi^2$ values are diagnostics rather than a likelihood
-analysis, and the entropy-to-power step together with the polarization transfer treatment are the
-named open items.
+analysis; the entropy-to-power step is carried by the companion projection-kernel
+note~\cite{Beau2026pce} as a conditional theorem chain, and the polarization transfer treatment
+remains the named open item.
 \end{enumerate}
 
 The low-$\ell$ anomaly is thereby moved from an illustrative ansatz to a constrained, falsifiable,
@@ -413,9 +429,11 @@ parameter-free prediction.
 Proved elsewhere and imported: the canonical Pell count and its closed form~\cite{Beau2026tb}.
 Geometric, re-audited here: the $8/3$ fibre-to-base stiffness ratio and its Monte-Carlo witness.
 Numerical, no-fit: the $2\times2$ grid outcome of Table~\ref{tab:grid}.
-Open: the entropy-to-power step (why bounded history capacity biases ensemble power rather than
-only enlarging cosmic variance); the transfer treatment of TE/EE; the modulation-ratio search
-($\ell_2/\ell_1\simeq1.633$).
+Carried by the companion projection-kernel note~\cite{Beau2026pce}: the entropy-to-power step, as a
+conditional theorem chain (kernel hypotheses graded there; strict suppression and the $(N-1)/N$
+ceiling proved given the hypotheses).
+Open: the transfer treatment of TE/EE; the modulation-ratio search ($\ell_2/\ell_1\simeq1.633$);
+whether the observed spectrum saturates the capacity ceiling.
 
 \subsection{Interpretive outlook}
 \label{subsec:outlook}
