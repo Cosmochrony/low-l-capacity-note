@@ -33,5 +33,5 @@ bash compile.sh
 
 ## Status
 
-Deposited on Zenodo, version 1.3.0.
+Deposited on Zenodo, version 1.4.0.
 Concept DOI: [10.5281/zenodo.21204352](https://doi.org/10.5281/zenodo.21204352).
